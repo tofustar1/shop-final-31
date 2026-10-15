@@ -1,0 +1,23 @@
+import axios from "axios"
+import {BASE_URL} from "./constants.ts";
+// import type {RootState} from "./app/store.ts";
+// import type {Store} from "@reduxjs/toolkit";
+
+const axiosApi = axios.create({
+  baseURL: BASE_URL,
+});
+
+// export const addInterceptors = (store: Store<RootState>) => {
+//   axiosApi.interceptors.request.use((config) => {
+//     const token: string | undefined = store.getState().users.user.token;
+//
+//     const headers = config.headers as AxiosHeaders;
+//
+//     // if (token) {
+//       headers.set('Authorization', token);
+//     // }
+//     return config;
+//   });
+// };
+
+export default axiosApi;
