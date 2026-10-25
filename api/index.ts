@@ -7,7 +7,6 @@ import categoriesRouter from "./routers/categories";
 import usersRouter from "./routers/users";
 
 const app = express();
-const port = 8080;
 
 app.use(express.json());
 app.use(cors());
@@ -18,10 +17,10 @@ app.use('/categories', categoriesRouter);
 app.use('/users', usersRouter);
 
 const run = async () => {
-  await mongoose.connect(config.mongoDbUrl);
+  await mongoose.connect(config.db);
 
-  app.listen(port, () => {
-    console.log("Listening on port " + port);
+  app.listen(config.port, () => {
+    console.log("Listening on port " + config.port);
   });
 
   process.on('exit', () => {

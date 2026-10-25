@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec tsx index.ts",
-    "seed": "tsx seed.ts"
+    "start:test": "NODE_ENV=test tsx index.ts",
+    "seed": "tsx seed.ts",
+    "seed:test": "NODE_ENV=test tsx seed.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,7 @@
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
+    "dotenv": "^18.0.8",
     "express": "^5.2.1",
     "google-auth-library": "^11.0.2",
     "mongoose": "^9.9.1",

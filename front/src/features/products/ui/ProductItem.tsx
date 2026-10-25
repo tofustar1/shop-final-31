@@ -2,7 +2,7 @@ import {Card, CardActions, CardContent, CardHeader, CardMedia, Grid, IconButton,
 import {Link} from "react-router-dom";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import imageNotAvailable from '../../../assets/images/not-available.jpg';
-import {BASE_URL} from "../../../constants.ts";
+import {API_URL} from "../../../constants.ts";
 
 interface Props {
   title: string;
@@ -21,7 +21,7 @@ const ProductItem = ({ title, price, id, image, categoryTitle }: Props) => {
   let cardImage = imageNotAvailable;
 
   if (image) {
-    cardImage = `${BASE_URL}/images/${image}`;
+    cardImage = `${API_URL}/images/${image}`;
   }
 
   return (

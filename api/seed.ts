@@ -5,7 +5,7 @@ import Product from "./models/Product";
 import User from "./models/User";
 
 const run = async () => {
-  await mongoose.connect(config.mongoDbUrl);
+  await mongoose.connect(config.db);
   const db = mongoose.connection;
 
   try {
