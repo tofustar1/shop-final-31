@@ -56,7 +56,7 @@ const Login = () => {
       <Box sx={{ mt: 2 }}>
         <GoogleLogin
           onSuccess={(credentialResponse) => {
-            void googleLoginHandler(credentialResponse.credential);
+            void googleLoginHandler(credentialResponse.credential ?? '');
           }}
           onError={() => {
             console.log('Login failed!');

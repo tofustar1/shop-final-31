@@ -14,7 +14,7 @@ export const getProducts = createAsyncThunk<Product[]>(
 export const createProduct = createAsyncThunk<void, ProductMutation, {state: RootState}>(
   'products/create',
   async (product, {getState},) => {
-    const token = getState().users.user.token;
+    const token = getState().users.user?.token;
     const formData = new FormData();
 
     const keys = Object.keys(product) as (keyof ProductMutation)[];
