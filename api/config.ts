@@ -7,7 +7,7 @@ const rootPath = __dirname;
 const envFile = process.env.NODE_ENV ? `.${process.env.NODE_ENV}.env` : '.env';
 configDotenv({path: path.join(rootPath, envFile)});
 
-const corsWhiteList = ['http://localhost:5173', 'http://localhost:5183'];
+const corsWhiteList = ['http://localhost:5173', 'http://localhost:5183', 'http://64.226.118.48'];
 
 const corsOptions: CorsOptions = {
   origin: (origin, callback) => {
