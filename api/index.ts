@@ -9,7 +9,7 @@ import usersRouter from "./routers/users";
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(config.corsOptions));
 app.use(express.static('public'));
 
 app.use('/products', productsRouter);
