@@ -19,7 +19,7 @@ const Products = () => {
   return (
     <Stack spacing={2}>
       <Stack direction={'row'} sx={{ justifyContent: "space-between", alignItems: "center"}}>
-        <Typography variant="h4">Products</Typography>
+        <Typography variant="h4">Test Title Products For New Build</Typography>
         {user && user.role === 'admin' && <Button
           color="primary"
           component={Link}
